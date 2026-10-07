@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  .font-mono-numbers {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .font-display {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Print Styles for thermal 58mm and A6 vertical/horizontal sheets */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-area {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Thermal specific print - ARIAL BOLD as requested */
+  .print-thermal-58 {
+    width: 58mm !important;
+    max-width: 58mm !important;
+    padding: 1.5mm 2.5mm !important;
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.2px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .print-thermal-58 * {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+  }
+
+  /* A6 Vertikal (Portrait: 105mm x 148mm) */
+  .print-a6-portrait {
+    width: 105mm !important;
+    min-height: 148mm !important;
+    max-width: 105mm !important;
+    padding: 5mm 6mm !important;
+    box-sizing: border-box !important;
+  }
+
+  /* A6 Horizontal (Landscape: 148mm x 105mm) - Paskan Full */
+  .print-a6-landscape {
+    width: 148mm !important;
+    min-height: 105mm !important;
+    max-width: 148mm !important;
+    padding: 3.5mm 5mm !important;
+    box-sizing: border-box !important;
+  }
+
+  .print-a5-landscape {
+    width: 210mm !important;
+    min-height: 148mm !important;
+    padding: 8mm 10mm !important;
+  }
+
+  .print-a5-portrait {
+    width: 148mm !important;
+    min-height: 210mm !important;
+    padding: 8mm 10mm !important;
+  }
+
+  @page {
+    margin: 4mm;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.45);
+}

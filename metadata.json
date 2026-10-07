@@ -1,0 +1,6 @@
+{
+  "name": "SM DIGITAL PRINTING - POS Percetakan Modern",
+  "description": "Sistem Kasir Percetakan Digital Printing & Fotocopy Profesional dengan Multi-Login, Pelacakan Nota QR, Manajemen Produksi & Keuangan Lengkap.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
